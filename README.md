@@ -8,7 +8,7 @@ Graduate cybersecurity student with a strong interest in **secure systems engine
 
 **M.S. in Cybersecurity**  
 The City College of New York (CUNY)  
-*Expected: 2026*
+*Expected: 2027*
 
 **B.S. in Computer Science & Engineering**  
 United International University
