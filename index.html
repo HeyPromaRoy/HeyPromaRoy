@@ -5,28 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
-    <title>Proma Roy | Cybersecurity & Research</title>
-    <meta name="title" content="Proma Roy | Cybersecurity & Research">
+    <title>Proma Roy | Cybersecurity & Secure Systems</title>
+    <meta name="title" content="Proma Roy | Cybersecurity & Secure Systems">
     <meta name="description"
-        content="Portfolio of Proma Roy, a cybersecurity graduate student and research assistant specializing in secure systems, privacy-preserving technology, and cryptography.">
+        content="Portfolio of Proma Roy, a cybersecurity graduate student and research assistant specializing in secure systems, applied cryptography, kernel-level telemetry, privacy-preserving technology, and network security.">
     <meta name="keywords"
-        content="Proma Roy, Cybersecurity, Research Assistant, Secure Systems, Cryptography, CCNY, CUNY">
+        content="Proma Roy, Cybersecurity, Research Assistant, Secure Systems, Cryptography, CCNY, CUNY, Network Security, Secure Operating Systems, ETW, auditd, eBPF, RSA, AI Sentinel">
     <meta name="author" content="Proma Roy">
+    <link rel="canonical" href="https://promaroy.me/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://promaroy.me/">
-    <meta property="og:title" content="Proma Roy | Cybersecurity & Research">
+    <meta property="og:title" content="Proma Roy | Cybersecurity & Secure Systems">
     <meta property="og:description"
-        content="Portfolio of Proma Roy, a cybersecurity graduate student and research assistant specializing in secure systems, privacy-preserving technology, and cryptography.">
+        content="Portfolio of Proma Roy, a cybersecurity graduate student and research assistant specializing in secure systems, applied cryptography, kernel-level telemetry, privacy-preserving technology, and network security.">
     <meta property="og:image" content="https://promaroy.me/assets/PromaRoy.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://promaroy.me/">
-    <meta property="twitter:title" content="Proma Roy | Cybersecurity & Research">
+    <meta property="twitter:title" content="Proma Roy | Cybersecurity & Secure Systems">
     <meta property="twitter:description"
-        content="Portfolio of Proma Roy, a cybersecurity graduate student and research assistant specializing in secure systems, privacy-preserving technology, and cryptography.">
+        content="Portfolio of Proma Roy, a cybersecurity graduate student and research assistant specializing in secure systems, applied cryptography, kernel-level telemetry, privacy-preserving technology, and network security.">
     <meta property="twitter:image" content="https://promaroy.me/assets/PromaRoy.jpg">
 
     <!-- Fonts & Styling -->
@@ -59,6 +60,19 @@
           "name": "United International University"
         }
       ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "Secure Systems",
+        "Secure Operating Systems",
+        "Network Security",
+        "Applied Cryptography",
+        "Privacy-Preserving Technology",
+        "Kernel-Level Telemetry",
+        "ETW",
+        "Linux auditd",
+        "eBPF",
+        "RSA"
+      ],
       "url": "https://promaroy.me/",
       "image": "https://promaroy.me/assets/PromaRoy.jpg",
       "sameAs": [
@@ -68,32 +82,26 @@
       ]
     }
     </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7RTCMCNGZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-F7RTCMCNGZ');
-    </script>
 </head>
 
 <body>
     <header class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Proma <span class="logo-accent">Roy</span></a>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+            <a href="#hero" class="logo" aria-label="Proma Roy homepage">Proma <span class="logo-accent">Roy</span></a>
+
+            <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+                <a href="#about" aria-label="Go to About section">About</a>
+                <a href="#experience" aria-label="Go to Experience section">Experience</a>
+                <a href="#research" aria-label="Go to Research section">Research</a>
+                <a href="#projects" aria-label="Go to Projects section">Projects</a>
+                <a href="#skills" aria-label="Go to Skills section">Skills</a>
+                <a href="#contact" aria-label="Go to Contact section">Contact</a>
             </nav>
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="primary-navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true" focusable="false">
                     <path d="M3 12h18M3 6h18M3 18h18" />
                 </svg>
             </button>
@@ -109,16 +117,20 @@
                     <h1 class="name">Proma Roy</h1>
                     <h2 class="title">Graduate Research Assistant & Cybersecurity Student</h2>
                     <p class="summary">
-                        I am a passionate researcher and engineer focused on building secure, privacy-preserving systems. I thrive at the intersection of <strong>software security</strong>, <strong>applied cryptography</strong>, and <strong>human-centered technology</strong>, aiming to solve complex challenges that create a tangible, positive impact.
+                        I focus on secure systems, applied cryptography, network security, and privacy-preserving
+                        technology. My work connects <strong>software security</strong>,
+                        <strong>kernel-level detection</strong>, and <strong>human-centered security research</strong>
+                        to build systems that are safer, more transparent, and more resilient.
                     </p>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        <a href="#contact" class="btn btn-primary" aria-label="Go to contact section">Get in Touch</a>
+                        <a href="#projects" class="btn btn-secondary"
+                            aria-label="View Proma Roy's featured projects">View Projects</a>
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="assets/PromaRoy.jpg" alt="Proma Roy" class="hero-image">
-                    <div class="hero-glow"></div>
+                    <img src="assets/PromaRoy.jpg" alt="Portrait of Proma Roy" class="hero-image">
+                    <div class="hero-glow" aria-hidden="true"></div>
                 </div>
             </div>
         </section>
@@ -130,15 +142,24 @@
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Based in New York City, my academic and professional journey is driven by a deep fascination with how technology intersects with user safety. My work bridges the gap between rigorous cybersecurity research, secure backend engineering, and interdisciplinary problem-solving.</p>
+                    <p>Based in New York City, my academic and professional journey is driven by a strong interest in
+                        how secure technology can protect people, systems, and data. My work bridges cybersecurity
+                        research, secure backend engineering, applied cryptography, and interdisciplinary
+                        problem-solving.</p>
+
                     <p>Currently, I work as a Graduate Research Assistant at RF CUNY, contributing to an NSF-funded
                         research initiative focused on privacy-preserving digital safety platforms intended to support
                         individuals at risk of intimate partner violence.</p>
-                    <p>Before transitioning into cybersecurity research, I gained valuable industry experience in
-                        healthcare credential verification, documentation systems, and data analytics. My long-term
-                        interests include secure systems, cryptography, AI accessibility, privacy engineering, and
-                        human-centered security.</p>
+
+                    <p>At CCNY, my recent project work includes cross-platform telemetry evasion detection on Windows 11
+                        and Ubuntu, RSA secure-channel tooling with AI-assisted security analysis, Rust-based secure
+                        systems, and network security demonstrations.</p>
+
+                    <p>Before transitioning into cybersecurity research, I gained industry experience in healthcare
+                        credential verification, documentation systems, data analytics, survey processing, and telehealth
+                        support workflows.</p>
                 </div>
+
                 <div class="education-cards">
                     <h3>Education</h3>
                     <div class="card">
@@ -148,6 +169,7 @@
                         </div>
                         <p class="degree">M.S. in Cybersecurity</p>
                     </div>
+
                     <div class="card">
                         <div class="card-header">
                             <h4>United International University</h4>
@@ -164,24 +186,27 @@
             <div class="section-header">
                 <h2 class="section-title">Experience</h2>
             </div>
+
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content card">
                         <div class="card-header">
                             <h3>Graduate Research Assistant</h3>
                             <span class="date">Mar 2026 – Present</span>
                         </div>
                         <p class="company">Research Foundation of CUNY (RF CUNY) • New York, NY</p>
-                        <p class="description">Contributing to an NSF-funded research initiative focusing on
-                            privacy-preserving digital safety technologies. My responsibilities include supporting the
-                            end-to-end software development lifecycle, backend analytics workflows, research
-                            prototyping, system testing, and interdisciplinary collaboration.</p>
+                        <p class="description"><strong>Project:</strong> Preventing Intimate Partner Violence Using
+                            Digital Technology: A Transdisciplinary Approach.</p>
+                        <p class="description">Contributing to an NSF-funded research initiative focused on
+                            privacy-preserving digital safety technologies. Responsibilities include supporting the
+                            software development lifecycle, backend analytics workflows, research prototyping, system
+                            testing, documentation, interdisciplinary collaboration, and beta testing preparation.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content card">
                         <div class="card-header">
                             <h3>Associate Vendor Coordinator</h3>
@@ -189,13 +214,13 @@
                         </div>
                         <p class="company">Radiant Data Systems • Dhaka, Bangladesh</p>
                         <p class="description">Managed healthcare credential verification and facility databases,
-                            maintaining a consecutive 100% audit accuracy. Coordinated documentation workflows with
+                            maintaining consecutive 100% audit accuracy. Coordinated documentation workflows with
                             external vendors and ensured strict compliance and record accuracy.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content card">
                         <div class="card-header">
                             <h3>Data Artist</h3>
@@ -209,7 +234,7 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content card">
                         <div class="card-header">
                             <h3>Junior Data Analyst</h3>
@@ -227,28 +252,48 @@
         <!-- Research Section -->
         <section id="research" class="section">
             <div class="section-header">
-                <h2 class="section-title">Research Contributions</h2>
+                <h2 class="section-title">Research & Applied Work</h2>
             </div>
+
             <div class="grid-cards">
+                <div class="card interactive-card">
+                    <h3>Privacy-Preserving Digital Safety Platform</h3>
+                    <p class="card-meta">RF CUNY / John Jay College of Criminal Justice | NSF PFI-RP</p>
+                    <p>Supporting an interdisciplinary project focused on privacy-preserving digital technology for
+                        individuals at risk of intimate partner violence. Work includes development support, research
+                        prototyping, backend data workflows, documentation, integration testing, and beta testing
+                        preparation.</p>
+                </div>
+
                 <div class="card interactive-card">
                     <h3>Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages</h3>
                     <p class="card-meta">SSRN Electronic Journal Preprint (2026) | Co-authored with Avijit Roy</p>
-                    <p>This research examines structural inequalities in modern AI infrastructure affecting
-                        underrepresented languages, using Bengali as a case study. It explores web presence disparities,
-                        tokenization inefficiencies, and argues for offline-first design as equity infrastructure.</p>
-                    <a href="https://doi.org/10.2139/ssrn.6522858" target="_blank" class="text-link">DOI:
+                    <p>This research examines structural barriers affecting underrepresented languages in AI systems,
+                        using Bengali as a case study. Topics include web presence disparity, multilingual training
+                        token imbalance, tokenization overhead, connectivity exclusion, and offline-first AI
+                        infrastructure.</p>
+                    <a href="https://doi.org/10.2139/ssrn.6522858" target="_blank" rel="noopener noreferrer"
+                        class="text-link"
+                        aria-label="Open DOI for Structural Silence SSRN preprint in a new tab">DOI:
                         10.2139/ssrn.6522858 &rarr;</a>
                 </div>
+
                 <div class="card interactive-card">
-                    <h3>Structural Silence — Poster Presentation</h3>
-                    <p class="card-meta">International Linguistic Association (ILA 2026) | New York, NY</p>
-                    <p>Poster presentation discussing structural barriers limiting the participation of underrepresented
-                        languages in AI systems. Topics include multilingual corpus imbalance, dataset inequality, and
-                        offline-first infrastructure approaches.</p>
+                    <h3>Structural Silence — Poster Presented at ILA 2026</h3>
+                    <p class="card-meta">69th Annual Conference of the International Linguistic Association | New York,
+                        NY</p>
+                    <p>Conference poster presentation highlighting structural barriers that limit participation of
+                        underrepresented languages in AI systems. The poster focuses on Bengali as a case study and
+                        discusses web representation gaps, dataset inequality, tokenization overhead, and offline-first
+                        infrastructure as an equity-centered design direction.</p>
                     <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                         <a href="https://avijitroy.com/research/structural-silence-poster/" target="_blank"
-                            class="text-link">Interactive Poster &rarr;</a>
-                        <a href="https://doi.org/10.5281/zenodo.19991979" target="_blank" class="text-link">DOI:
+                            rel="noopener noreferrer" class="text-link"
+                            aria-label="Open the interactive Structural Silence poster page in a new tab">Interactive
+                            Poster &rarr;</a>
+                        <a href="https://doi.org/10.5281/zenodo.19991979" target="_blank" rel="noopener noreferrer"
+                            class="text-link"
+                            aria-label="Open DOI for Structural Silence ILA 2026 poster in a new tab">DOI:
                             10.5281/zenodo.19991979 &rarr;</a>
                     </div>
                 </div>
@@ -260,47 +305,105 @@
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
             </div>
+
             <div class="grid-cards">
+                <div class="card interactive-card">
+                    <div class="project-tags">
+                        <span class="tag">Windows 11</span>
+                        <span class="tag">Ubuntu</span>
+                        <span class="tag">Kernel Telemetry</span>
+                    </div>
+                    <h3>OS Telemetry Evasion and Kernel-Resident Detection</h3>
+                    <p class="card-meta">CSC I0420 — Secure Operating Systems | CCNY | Spring 2026</p>
+                    <p>Built a cross-platform case study testing whether ETW blind spots on Windows and Linux auditd
+                        suppression can be detected through independent kernel-level telemetry. The project compared
+                        ETW/auditd streams against kernel callbacks and eBPF tracepoints, flagging divergence as
+                        ghost-process or blind-spot evidence.</p>
+                    <ul class="compact-list">
+                        <li>MITRE ATT&CK: T1562.006</li>
+                        <li>Detected a 1.13% ETW gap and identified ghost processes</li>
+                        <li>Measured a Linux blind spot of approximately 90 seconds</li>
+                        <li>Validated 12/12 Windows tests</li>
+                    </ul>
+                </div>
+
+                <div class="card interactive-card">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">RSA</span>
+                        <span class="tag">AI Sentinel</span>
+                    </div>
+                    <h3>RSA Encryption Toolkit with AI Sentinel</h3>
+                    <p class="card-meta">Network Security I (I7000) — Project 13 | CCNY | Spring 2026</p>
+                    <p>Implemented an RSA-based secure-channel toolkit with key generation, encryption, decryption,
+                        digital signatures, hybrid encryption, MITM and downgrade demonstrations, logging, and an AI
+                        command center powered by local Ollama inference.</p>
+                    <ul class="compact-list">
+                        <li>AI Sentinel maps natural-language requests to security modules</li>
+                        <li>Supports IDS log triage and forensic session review</li>
+                        <li>Provides post-execution analysis with MITRE ATT&CK alignment</li>
+                    </ul>
+                </div>
+
                 <div class="card interactive-card">
                     <div class="project-tags">
                         <span class="tag">Rust</span>
                         <span class="tag">Security Audit</span>
                     </div>
                     <h3>Security Audit of Rust-Based E-Voting System</h3>
+                    <p class="card-meta">Secure Systems Engineering | CCNY | Nov 2025 – Dec 2025</p>
                     <p>Conducted a comprehensive security audit of a Rust-based electronic voting platform. Applied
-                        STRIDE threat modeling, OWASP Top 10 mapping, static analysis, and runtime fault injection to
-                        identify vulnerabilities across authentication, access control, and cryptography.</p>
-                    <a href="https://github.com/HeyPromaRoy/secure-systems-evoting-audit" target="_blank" class="text-link" style="margin-top: auto;">View Source &rarr;</a>
+                        STRIDE threat modeling, OWASP Top 10 mapping, CWE mapping, static analysis, and runtime fault
+                        injection to identify vulnerabilities across authentication, access control, cryptography,
+                        privacy, availability, and build integrity.</p>
+                    <a href="https://github.com/HeyPromaRoy/secure-systems-evoting-audit" target="_blank"
+                        rel="noopener noreferrer" class="text-link" style="margin-top: auto;"
+                        aria-label="Open GitHub repository for Security Audit of Rust-Based E-Voting System in a new tab">View
+                        Source &rarr;</a>
                 </div>
+
                 <div class="card interactive-card">
                     <div class="project-tags">
                         <span class="tag">Rust</span>
                         <span class="tag">Cryptography</span>
                     </div>
                     <h3>Threshold ElGamal Encryption</h3>
-                    <p>Implemented a threshold cryptography system in Rust featuring Distributed Key Generation (DKG),
-                        threshold decryption, Zero-Knowledge Proofs, and multi-party secure collaboration.</p>
-                    <a href="https://github.com/HeyPromaRoy/Threshold-ELGamal" target="_blank" class="text-link" style="margin-top: auto;">View Source &rarr;</a>
+                    <p class="card-meta">Secure Systems Engineering | CCNY | Oct 2025 – Dec 2025</p>
+                    <p>Implemented a threshold cryptography system in Rust where no single party holds the full private
+                        key. The project demonstrates a 3-of-5 Threshold ElGamal scheme with distributed key generation,
+                        threshold decryption, and zero-knowledge proofs.</p>
+                    <a href="https://github.com/HeyPromaRoy/Threshold-ELGamal" target="_blank"
+                        rel="noopener noreferrer" class="text-link" style="margin-top: auto;"
+                        aria-label="Open GitHub repository for Threshold ElGamal Encryption project in a new tab">View
+                        Source &rarr;</a>
                 </div>
+
                 <div class="card interactive-card">
                     <div class="project-tags">
                         <span class="tag">Rust</span>
                         <span class="tag">Systems Engineering</span>
                     </div>
                     <h3>Smart Thermostat — Secure CLI HVAC Prototype</h3>
+                    <p class="card-meta">Secure Systems Engineering | CCNY | Sep 2025 – Oct 2025</p>
                     <p>Built a secure, role-based smart thermostat CLI with HVAC simulation. Implemented Argon2id
-                        password hashing, RBAC, session management, hardened SQLite storage, and a tamper-evident
-                        integrity check verified at startup.</p>
-                    <a href="https://github.com/HeyPromaRoy/SmartThermostat" target="_blank" class="text-link" style="margin-top: auto;">View Source &rarr;</a>
+                        password hashing, RBAC, session management, hardened SQLite storage, appended security logs, and
+                        a tamper-evident integrity check verified at startup.</p>
+                    <a href="https://github.com/HeyPromaRoy/SmartThermostat" target="_blank" rel="noopener noreferrer"
+                        class="text-link" style="margin-top: auto;"
+                        aria-label="Open GitHub repository for Smart Thermostat secure CLI HVAC prototype in a new tab">View
+                        Source &rarr;</a>
                 </div>
+
                 <div class="card interactive-card">
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">NLP</span>
                     </div>
                     <h3>Bangla Sentiment Analysis</h3>
+                    <p class="card-meta">Undergraduate Thesis | United International University</p>
                     <p>An NLP-based sentiment analysis research and implementation project for Bengali text processing.
-                        Included dataset preparation, algorithm development, and NLP experimentation.</p>
+                        Included dataset preparation, algorithm development, Python implementation, and NLP
+                        experimentation under the supervision of Professor Dr. Mohammad Nurul Huda.</p>
                 </div>
             </div>
         </section>
@@ -310,30 +413,53 @@
             <div class="section-header">
                 <h2 class="section-title">Skills & Certifications</h2>
             </div>
+
             <div class="skills-container">
                 <div class="skills-col">
                     <h3>Technical Skills</h3>
+
                     <div class="skill-category">
                         <h4>Cybersecurity & Engineering</h4>
                         <div class="skill-tags">
                             <span class="tag outline">Secure Systems</span>
-                            <span class="tag outline">Threat Modeling (STRIDE)</span>
+                            <span class="tag outline">Secure Operating Systems</span>
+                            <span class="tag outline">Threat Modeling</span>
+                            <span class="tag outline">STRIDE</span>
                             <span class="tag outline">OWASP Top 10</span>
-                            <span class="tag outline">Cryptography</span>
+                            <span class="tag outline">MITRE ATT&CK</span>
+                            <span class="tag outline">Detection Engineering</span>
                             <span class="tag outline">Network Security</span>
                             <span class="tag outline">Endpoint & Cloud Security</span>
                         </div>
                     </div>
+
+                    <div class="skill-category">
+                        <h4>Systems, Telemetry & Cryptography</h4>
+                        <div class="skill-tags">
+                            <span class="tag outline">Windows ETW</span>
+                            <span class="tag outline">Linux auditd</span>
+                            <span class="tag outline">eBPF / bpftrace</span>
+                            <span class="tag outline">Kernel-Level Telemetry</span>
+                            <span class="tag outline">RSA</span>
+                            <span class="tag outline">Digital Signatures</span>
+                            <span class="tag outline">Hybrid Encryption</span>
+                            <span class="tag outline">Threshold Cryptography</span>
+                        </div>
+                    </div>
+
                     <div class="skill-category">
                         <h4>Programming & Data</h4>
                         <div class="skill-tags">
-                            <span class="tag outline">Rust</span>
                             <span class="tag outline">Python</span>
+                            <span class="tag outline">Rust</span>
+                            <span class="tag outline">C++</span>
                             <span class="tag outline">SQL / SQLite</span>
                             <span class="tag outline">SPSS</span>
                             <span class="tag outline">Data Analytics</span>
+                            <span class="tag outline">Ollama</span>
                         </div>
                     </div>
+
                     <div class="skill-category">
                         <h4>Tools & Workflows</h4>
                         <div class="skill-tags">
@@ -341,25 +467,39 @@
                             <span class="tag outline">Linux</span>
                             <span class="tag outline">Technical Documentation</span>
                             <span class="tag outline">Software Testing</span>
+                            <span class="tag outline">IDS Log Triage</span>
+                            <span class="tag outline">SIEM JSON Alerts</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="certifications-col">
                     <h3>Certifications</h3>
+
                     <div class="card">
                         <h4>Palo Alto Networks</h4>
                         <ul class="cert-list">
-                            <li>Cybersecurity Fundamentals</li>
-                            <li>Network Security Fundamentals</li>
-                            <li>Endpoint Security</li>
-                            <li>Cloud Security Fundamentals</li>
-                            <li>Understanding Security Operations: Foundational</li>
+                            <li>Understanding Security Operations: Foundational — June 2025</li>
+                            <li>Cloud Security Fundamentals — June 2025</li>
+                            <li>Endpoint Security — June 2025</li>
+                            <li>Cybersecurity Fundamentals — May 2025</li>
+                            <li>Network Security Fundamentals — May 2025</li>
                         </ul>
                     </div>
+
                     <div class="card mt-4">
                         <h4>Duolingo English Test</h4>
                         <ul class="cert-list">
-                            <li>English Proficiency Certificate</li>
+                            <li>English Proficiency Certificate — Issued January 2025, expires January 2027</li>
+                        </ul>
+                    </div>
+
+                    <div class="card mt-4">
+                        <h4>Languages</h4>
+                        <ul class="cert-list">
+                            <li>Bengali — Native / Bilingual</li>
+                            <li>English — Full Professional</li>
+                            <li>Hindi — Limited Working</li>
                         </ul>
                     </div>
                 </div>
@@ -370,21 +510,25 @@
         <section id="contact" class="section">
             <div class="contact-box card">
                 <h2 class="section-title text-center">Let's Connect</h2>
-                <p class="text-center">I'm always open to discussing academic and applied security research, secure
-                    software development projects, or interdisciplinary collaborations.</p>
+                <p class="text-center">I'm open to discussing academic and applied security research, secure software
+                    development projects, network security, or interdisciplinary collaborations.</p>
+
                 <div class="contact-links">
-                    <a href="mailto:Hello@PromaRoy.me" class="contact-link">
+                    <a href="mailto:Hello@PromaRoy.me" class="contact-link"
+                        aria-label="Email Proma Roy at Hello at PromaRoy dot me">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none">
+                            fill="none" aria-hidden="true" focusable="false">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                             </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                         Hello@PromaRoy.me
                     </a>
-                    <a href="https://www.linkedin.com/in/heypromaroy" target="_blank" class="contact-link">
+
+                    <a href="https://www.linkedin.com/in/heypromaroy" target="_blank" rel="noopener noreferrer"
+                        class="contact-link" aria-label="Open Proma Roy's LinkedIn profile in a new tab">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none">
+                            fill="none" aria-hidden="true" focusable="false">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
                             </path>
                             <rect x="2" y="9" width="4" height="12"></rect>
@@ -392,24 +536,28 @@
                         </svg>
                         LinkedIn
                     </a>
-                    <a href="https://github.com/HeyPromaRoy" target="_blank" class="contact-link">
+
+                    <a href="https://github.com/HeyPromaRoy" target="_blank" rel="noopener noreferrer"
+                        class="contact-link" aria-label="Open Proma Roy's GitHub profile in a new tab">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none">
+                            fill="none" aria-hidden="true" focusable="false">
                             <path
                                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                             </path>
                         </svg>
                         GitHub
                     </a>
-                    <a href="https://orcid.org/0009-0004-1060-9116" target="_blank" class="contact-link">
+
+                    <a href="https://orcid.org/0009-0004-1060-9116" target="_blank" rel="noopener noreferrer"
+                        class="contact-link" aria-label="Open Proma Roy's ORCID profile in a new tab">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none">
+                            fill="none" aria-hidden="true" focusable="false">
                             <circle cx="12" cy="12" r="10"></circle>
                             <path d="M8 10v4"></path>
                             <circle cx="8" cy="7" r="0.5"></circle>
                             <path d="M11 10h2.5c1.5 0 2.5 1 2.5 2s-1 2-2.5 2H11v-4z"></path>
                         </svg>
-                        ORCiD
+                        ORCID
                     </a>
                 </div>
             </div>
@@ -418,7 +566,19 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Proma Roy. Built with focus on security and performance.</p>
+            <p>&copy; 2026 Proma Roy. Built with focus on security, accessibility, and performance.</p>
+            <p class="footer-links">
+                <a href="mailto:Hello@PromaRoy.me" aria-label="Email Proma Roy">Email</a>
+                <span aria-hidden="true">•</span>
+                <a href="https://www.linkedin.com/in/heypromaroy" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open Proma Roy's LinkedIn profile in a new tab">LinkedIn</a>
+                <span aria-hidden="true">•</span>
+                <a href="https://github.com/HeyPromaRoy" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open Proma Roy's GitHub profile in a new tab">GitHub</a>
+                <span aria-hidden="true">•</span>
+                <a href="https://orcid.org/0009-0004-1060-9116" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open Proma Roy's ORCID profile in a new tab">ORCID</a>
+            </p>
         </div>
     </footer>
 
