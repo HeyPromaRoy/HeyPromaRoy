@@ -1,55 +1,85 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+document.documentElement.classList.add("js");
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".primary-nav");
+const navigationLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
+
+function setMenu(open) {
+    if (!menuButton || !navigation) return;
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.querySelector(".sr-only").textContent = open ? "Close navigation" : "Open navigation";
+    navigation.classList.toggle("is-open", open);
+}
+
+menuButton?.addEventListener("click", () => {
+    setMenu(menuButton.getAttribute("aria-expanded") !== "true");
 });
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+navigationLinks.forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
 });
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
+document.addEventListener("click", (event) => {
+    if (!navigation?.classList.contains("is-open")) return;
+    if (navigation.contains(event.target) || menuButton.contains(event.target)) return;
+    setMenu(false);
 });
 
-// Subtle reveal animation on scroll
-const revealElements = document.querySelectorAll('.card, .timeline-item, .section-header');
+document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !navigation?.classList.contains("is-open")) return;
+    setMenu(false);
+    menuButton.focus();
+});
 
-const revealCallback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+const revealItems = document.querySelectorAll("[data-reveal]");
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
-        }
-    });
-};
+        });
+    }, { threshold: 0.08, rootMargin: "0px 0px -40px" });
 
-const revealOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-};
+    revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+}
 
-const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+const observedSections = navigationLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
 
-// Initialize styles for reveal
-revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    revealObserver.observe(el);
-});
+if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visible) return;
+        navigationLinks.forEach((link) => {
+            const isCurrent = link.getAttribute("href") === `#${visible.target.id}`;
+            if (isCurrent) link.setAttribute("aria-current", "true");
+            else link.removeAttribute("aria-current");
+        });
+    }, { rootMargin: "-25% 0px -60%", threshold: [0.01, 0.2, 0.5] });
+
+    observedSections.forEach((section) => sectionObserver.observe(section));
+}
+
+const progressBar = document.querySelector(".reading-progress span");
+
+function updateReadingProgress() {
+    if (!progressBar) return;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+    progressBar.style.width = `${progress * 100}%`;
+}
+
+window.addEventListener("scroll", updateReadingProgress, { passive: true });
+window.addEventListener("resize", updateReadingProgress);
+updateReadingProgress();
+
+const year = document.querySelector("#current-year");
+if (year) year.textContent = new Date().getFullYear();
