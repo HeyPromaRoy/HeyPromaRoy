@@ -1,0 +1,39 @@
+# Proma Roy
+
+> Official personal website of Proma Roy, a cybersecurity researcher and adjunct lecturer in New York City.
+
+Proma Roy teaches computer science and applied mathematics at John Jay College of Criminal Justice and The City College of New York. Her work includes secure systems, applied cryptography, privacy-preserving technology, computing education, and equitable AI for underrepresented-language communities.
+
+## Current teaching
+
+- John Jay College of Criminal Justice: CSCI 171, Introduction to Python; and CSCI 271, Introduction to Computing & Programming in C++.
+- The City College of New York: Applied Linear Algebra, including Python-based labs.
+
+## Website
+
+- [Homepage](https://promaroy.me/): Biography, academic appointments, research, technical projects, skills, education, and contact information.
+- [Experience](https://promaroy.me/#experience): Current teaching appointments and prior research and professional experience.
+- [Research](https://promaroy.me/#research): Research publications, presentations, and applied research.
+- [Technical Projects](https://promaroy.me/#projects): Selected secure-systems, cryptography, operating-system security, and Bengali NLP projects.
+
+## Research
+
+- [Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities](https://doi.org/10.48550/arXiv.2608.09046): Coauthored with [Avijit Roy](https://avijitroy.com/research/) and Hrishitva Patel; presented orally and as a poster at LM4UC at IJCAI 2026.
+- [Tokenization Equity Audit Repository](https://github.com/HeyAvijitRoy/tea-benchmark): Reproducible benchmark and research artifacts for the tokenization study.
+- [Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages](https://doi.org/10.48550/arXiv.2608.12278): Coauthored with [Avijit Roy](https://avijitroy.com/research/); presented as a poster at the 69th Annual International Linguistic Association Conference.
+- [Structural Silence Interactive Poster](https://avijitroy.com/research/structural-silence-poster/): Interactive version of the ILA 2026 poster.
+
+## Selected Project Repositories
+
+- [Threshold ElGamal](https://github.com/HeyPromaRoy/Threshold-ELGamal): Threshold cryptography implementation in Rust.
+- [Smart Thermostat](https://github.com/HeyPromaRoy/SmartThermostat): Secure Rust CLI with authentication, access control, hardened storage, and audit logging.
+
+## Professional Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/heypromaroy/)
+- [GitHub](https://github.com/HeyPromaRoy)
+- [ORCID](https://orcid.org/0009-0004-1060-9116)
+
+## Contact
+
+- [Email Proma Roy](mailto:Hello@PromaRoy.me)

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://promaroy.me/sitemap.xml
